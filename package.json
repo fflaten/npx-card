@@ -1,6 +1,6 @@
 {
   "name": "fflaten",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A personal card for Frode Flaten (@fflaten)",
   "type": "module",
   "bin": {
@@ -22,5 +22,11 @@
   "dependencies": {
     "boxen": "^8.0.1",
     "chalk": "^5.4.1"
-  }
+  },
+  "files": [
+    "bin/card.js",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ]
 }
