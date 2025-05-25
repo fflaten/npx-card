@@ -24,9 +24,6 @@
     "chalk": "^5.4.1"
   },
   "files": [
-    "bin/card.js",
-    "package.json",
-    "LICENSE",
-    "README.md"
+    "bin/card.js"
   ]
 }
