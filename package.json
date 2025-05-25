@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/fflaten/npx-card.git"
   },
-  "author": "Frode Flaten (https://frodeflaten.com)",
+  "author": "Frode Flaten",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fflaten/npx-card/issues"

@@ -14,16 +14,15 @@ const options = {
 
 // Text + chalk definitions
 const data = {
-    name: chalk.white('Frode Flaten'),
-    handle: chalk.white('@fflaten'),
-    work: chalk.white('PowerShell enthusiast and IT professional'),
-    bluesky: chalk.gray('https://bsky.app/profile/') + chalk.blue('frodeflaten.com'),
-    twitter: chalk.gray('https://twitter.com/') + chalk.cyan('frodeflaten'),
-    github: chalk.gray('https://github.com/') + chalk.green('fflaten'),
-    linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('frodeflaten'),
+    name: chalk.white.bold('Frode Flaten'),
+    handle: chalk.white.bold('@fflaten'),
+    subtitle: chalk.white('PowerShell enthusiast'),
+    bluesky: chalk.cyan('https://bsky.app/profile/frodeflaten.com'),
+    twitter: chalk.cyan('https://twitter.com/frodeflaten'),
+    github: chalk.cyan('https://github.com/fflaten'),
+    linkedin: chalk.cyan('https://linkedin.com/in/frodeflaten'),
     web: chalk.cyan('https://frodeflaten.com'),
-    npx: `${chalk.red('npx')} ${chalk.white('fflaten')}`,
-    labelWork: chalk.white.bold('    Work:'),
+    npx: chalk.green('npx fflaten'),
     labelBlueSky: chalk.white.bold(' BlueSky:'),
     labelTwitter: chalk.white.bold(' Twitter:'),
     labelGitHub: chalk.white.bold('  GitHub:'),
@@ -32,36 +31,27 @@ const data = {
     labelCard: chalk.white.bold('    Card:'),
 };
 
-// Actual strings we're going to output
+// Create single output for boxen
 const newline = '\n';
-const title = `${data.name} / ${data.handle}`;
-const work = `${data.labelWork}  ${data.work}`;
-const bluesky = `${data.labelBlueSky}  ${data.bluesky}`;
-const twitter = `${data.labelTwitter}  ${data.twitter}`;
-const github = `${data.labelGitHub}  ${data.github}`;
-const linkedin = `${data.labelLinkedIn}  ${data.linkedin}`;
-const web = `${data.labelWeb}  ${data.web}`;
-const card = `${data.labelCard}  ${data.npx}`;
-
-// Put all our output together into a single variable so we can use boxen effectively
 const output =
-    title + // data.name + data.handle
+    `${data.name} | ${data.handle}` +
     newline +
-    newline + // Add one whole blank line
-    work +
-    newline + // data.labelWork + data.work
-    bluesky +
-    newline + // data.labelBlueSky + data.bluesky
-    twitter  +
-    newline + // data.labelTwitter + data.twitter
-    github +
-    newline + // data.labelGitHub + data.github
-    linkedin +
-    newline + // data.labelLinkedIn + data.linkedin
-    web +
     newline +
-    newline + // data.labelWeb + data.web
-    card; // data.labelCard + data.npx
+    data.subtitle +
+    newline +
+    newline +
+    `${data.labelBlueSky}  ${data.bluesky} ` +
+    newline +
+    `${data.labelTwitter}  ${data.twitter} ` +
+    newline +
+    `${data.labelGitHub}  ${data.github} ` +
+    newline +
+    `${data.labelLinkedIn}  ${data.linkedin} ` +
+    newline +
+    `${data.labelWeb}  ${data.web} ` +
+    newline +
+    newline +
+    `${data.labelCard}  ${data.npx}`;
 
 // Print
-console.log(chalk.green(boxen(output, options)));
+console.log(chalk.magenta(boxen(output, options)));
