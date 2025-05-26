@@ -1,6 +1,6 @@
 {
-  "name": "fflaten",
-  "version": "0.1.0",
+  "name": "@fflaten/card",
+  "version": "1.0.0",
   "description": "A personal card for Frode Flaten (@fflaten)",
   "type": "module",
   "bin": {
